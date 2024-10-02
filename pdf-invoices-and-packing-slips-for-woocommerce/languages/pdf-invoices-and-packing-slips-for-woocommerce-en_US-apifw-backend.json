@@ -1,0 +1,708 @@
+{
+    "translation-revision-date": "2022-08-08T04:58:51+00:00",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "backend.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "en",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Billing Address": [
+                ""
+            ],
+            "Title": [
+                ""
+            ],
+            "Font Family": [
+                ""
+            ],
+            "Font Size": [
+                ""
+            ],
+            "Font Weight": [
+                ""
+            ],
+            "Font Style": [
+                ""
+            ],
+            "Font Colour": [
+                ""
+            ],
+            "Text Align": [
+                ""
+            ],
+            "Element Styles": [
+                ""
+            ],
+            "Colour Theme": [
+                ""
+            ],
+            "Company Logo": [
+                ""
+            ],
+            "Display": [
+                ""
+            ],
+            "Width": [
+                ""
+            ],
+            "Height": [
+                ""
+            ],
+            "Extra Details": [
+                ""
+            ],
+            "Extra Details Font Family": [
+                ""
+            ],
+            "Extra Details Font Size": [
+                ""
+            ],
+            "Extra Details Font Weight": [
+                ""
+            ],
+            "Extra Details Font Style": [
+                ""
+            ],
+            "Extra Details Font colour": [
+                ""
+            ],
+            "Customer Note": [
+                ""
+            ],
+            "Label": [
+                ""
+            ],
+            "Content Colour": [
+                ""
+            ],
+            "Label Colour": [
+                ""
+            ],
+            "From Address": [
+                ""
+            ],
+            "Elements Visibility & Styles": [
+                ""
+            ],
+            "Sender": [
+                ""
+            ],
+            "Address1": [
+                ""
+            ],
+            "Address2": [
+                ""
+            ],
+            "City": [
+                ""
+            ],
+            "Country": [
+                ""
+            ],
+            "Postal Code": [
+                ""
+            ],
+            "Email ID": [
+                ""
+            ],
+            "Phone No": [
+                ""
+            ],
+            "VAT\/GST Registration No": [
+                ""
+            ],
+            "VAT\/GST Registration No Label": [
+                ""
+            ],
+            "Invoice Date": [
+                ""
+            ],
+            "Format": [
+                ""
+            ],
+            "Date Colour": [
+                ""
+            ],
+            "Footer": [
+                ""
+            ],
+            "Text Colour": [
+                ""
+            ],
+            "Invoice Number": [
+                ""
+            ],
+            "Number Colour": [
+                ""
+            ],
+            "General Settings": [
+                ""
+            ],
+            "Document Settings": [
+                ""
+            ],
+            "Help & Support": [
+                ""
+            ],
+            "Upgrade to Pro": [
+                ""
+            ],
+            "Order Date": [
+                ""
+            ],
+            "Order Number": [
+                ""
+            ],
+            "Payment Method": [
+                ""
+            ],
+            "Method Colour": [
+                ""
+            ],
+            "Product Table": [
+                ""
+            ],
+            "Table Elements Visibility": [
+                ""
+            ],
+            "SKU": [
+                ""
+            ],
+            "Product Name": [
+                ""
+            ],
+            "Price": [
+                ""
+            ],
+            "Quantity": [
+                ""
+            ],
+            "Tax Rate": [
+                ""
+            ],
+            "Tax Type": [
+                ""
+            ],
+            "Tax Value": [
+                ""
+            ],
+            "Total": [
+                ""
+            ],
+            "Table Head Labels": [
+                ""
+            ],
+            "Table Head Styles": [
+                ""
+            ],
+            "Background Colour": [
+                ""
+            ],
+            "Border Colour": [
+                ""
+            ],
+            "Table Body Styles": [
+                ""
+            ],
+            "Shipping Address": [
+                ""
+            ],
+            "Shipping Method": [
+                ""
+            ],
+            "Pending Payment": [
+                ""
+            ],
+            "Processing": [
+                ""
+            ],
+            "On Hold": [
+                ""
+            ],
+            "Completed": [
+                ""
+            ],
+            "Cancelled": [
+                ""
+            ],
+            "Refunded": [
+                ""
+            ],
+            "Failed": [
+                ""
+            ],
+            "Draft": [
+                ""
+            ],
+            "[number]": [
+                ""
+            ],
+            "[number][suffix]": [
+                ""
+            ],
+            "[prefix][number]": [
+                ""
+            ],
+            "[prefix][number][suffix]": [
+                ""
+            ],
+            "The document types": [
+                ""
+            ],
+            "Invoice": [
+                ""
+            ],
+            "Enabled": [
+                ""
+            ],
+            "Disabled": [
+                ""
+            ],
+            "Packing Slip": [
+                ""
+            ],
+            "Shipping Label": [
+                ""
+            ],
+            "Delivery Note": [
+                ""
+            ],
+            "Dispatch Label": [
+                ""
+            ],
+            "Invoice settings": [
+                ""
+            ],
+            "Configure the invoice settings from the options below.": [
+                ""
+            ],
+            "Customize Layout": [
+                ""
+            ],
+            "Enable Invoice": [
+                ""
+            ],
+            "Invoice Name": [
+                ""
+            ],
+            "Use Order date as Invoice date": [
+                ""
+            ],
+            "Genarate invoice for order statuses": [
+                ""
+            ],
+            "Choose Order Status": [
+                ""
+            ],
+            "Order statuses for which invoice need to be generated.": [
+                ""
+            ],
+            "Generate invoice for free orders": [
+                ""
+            ],
+            "Display free line items in the invoice": [
+                ""
+            ],
+            "Invoice number format": [
+                ""
+            ],
+            "Select": [
+                ""
+            ],
+            "Next Invoice No.": [
+                ""
+            ],
+            "Reset": [
+                ""
+            ],
+            "Invoice No. Prefix": [
+                ""
+            ],
+            "Invoice No. Suffix": [
+                ""
+            ],
+            "Invoice length": [
+                ""
+            ],
+            "The total length of the invoice number, excluding the length of prefix and suffix. If the length of the generated invoice number is less than the provided, it will be padded with \u20180\u2019. E.g if you set 6 as invoice length and invoice number is 2005, it will be represented as 002005 in the respective documents.": [
+                ""
+            ],
+            "Attach invoice PDF in email": [
+                ""
+            ],
+            "PDF of active invoice template will be attached with the order email": [
+                ""
+            ],
+            "Enable print invoice option for customers": [
+                ""
+            ],
+            "Add invoice button to the order detail and thank you page": [
+                ""
+            ],
+            "Custom logo for invoice": [
+                ""
+            ],
+            "Upload": [
+                ""
+            ],
+            "If leave it as blank, defaulted to logo from General settings.": [
+                ""
+            ],
+            "Custom CSS": [
+                ""
+            ],
+            "Check MPDF supported CSS attributes ": [
+                ""
+            ],
+            "Package Slip Settings": [
+                ""
+            ],
+            "Configure the package slip settings from the options below.": [
+                ""
+            ],
+            "Enable Package slip": [
+                ""
+            ],
+            "Packing slip per item": [
+                ""
+            ],
+            "Include product image": [
+                ""
+            ],
+            "Add product image in product table": [
+                ""
+            ],
+            "Add customer note": [
+                ""
+            ],
+            "Add customer note in packing list": [
+                ""
+            ],
+            "Add footer": [
+                ""
+            ],
+            "Add footer in packing list": [
+                ""
+            ],
+            "Date Format": [
+                ""
+            ],
+            "Label Settings": [
+                ""
+            ],
+            "Date label": [
+                ""
+            ],
+            "Order number label": [
+                ""
+            ],
+            "From address title": [
+                ""
+            ],
+            "Billing address title": [
+                ""
+            ],
+            "Shipping address title": [
+                ""
+            ],
+            "Table image column label": [
+                ""
+            ],
+            "Table sku label": [
+                ""
+            ],
+            "Table product name label": [
+                ""
+            ],
+            "Table quantity label": [
+                ""
+            ],
+            "Table weight label": [
+                ""
+            ],
+            "Style Settings": [
+                ""
+            ],
+            "Heading color": [
+                ""
+            ],
+            "Table header background color": [
+                ""
+            ],
+            "Table header border color": [
+                ""
+            ],
+            "Table header font color": [
+                ""
+            ],
+            "Table body background color": [
+                ""
+            ],
+            "Table body border color": [
+                ""
+            ],
+            "Table body font color": [
+                ""
+            ],
+            "Shipping label": [
+                ""
+            ],
+            "Configure the shipping label from the options below.": [
+                ""
+            ],
+            "Enable Shipping Label": [
+                ""
+            ],
+            "Show logo": [
+                ""
+            ],
+            "Logo in general settings will be displayed on generated document.": [
+                ""
+            ],
+            "Add footer in shipping label": [
+                ""
+            ],
+            "Enable barcode": [
+                ""
+            ],
+            "If needed barcode on the generated document.": [
+                ""
+            ],
+            "Order no label": [
+                ""
+            ],
+            "Weight label": [
+                ""
+            ],
+            "To address title": [
+                ""
+            ],
+            "Email label": [
+                ""
+            ],
+            "Phone number label": [
+                ""
+            ],
+            "Tracking number label": [
+                ""
+            ],
+            "Delivery Note Settings": [
+                ""
+            ],
+            "Configure the delivery note from the options below.": [
+                ""
+            ],
+            "Enable Delivery Note": [
+                ""
+            ],
+            "Add customer note in delivery note": [
+                ""
+            ],
+            "Add footer in delivery note": [
+                ""
+            ],
+            "Configure the dispatch label from the options below.": [
+                ""
+            ],
+            "Enable Dispatch Label": [
+                ""
+            ],
+            "Add customer note in dispatch label": [
+                ""
+            ],
+            "Add footer in dispatch label": [
+                ""
+            ],
+            "Update Settings": [
+                ""
+            ],
+            "Saving Settings": [
+                ""
+            ],
+            "Changes Saved": [
+                ""
+            ],
+            "Company info": [
+                ""
+            ],
+            "The company, shipping address and from address details in the sections below will be used to fill up the invoice and related documents accordingly.": [
+                ""
+            ],
+            "Name": [
+                ""
+            ],
+            "Logo": [
+                ""
+            ],
+            "Upload a logo which will be used across the documents": [
+                ""
+            ],
+            "Add footer text for the documents.": [
+                ""
+            ],
+            "Address(Sender details)": [
+                ""
+            ],
+            "Department\/Sender": [
+                ""
+            ],
+            "Address line 1": [
+                ""
+            ],
+            "Address line 2": [
+                ""
+            ],
+            "Country\/State": [
+                ""
+            ],
+            "Postal code": [
+                ""
+            ],
+            "Contact number": [
+                ""
+            ],
+            "Email": [
+                ""
+            ],
+            "VAT\/GST Registration Number": [
+                ""
+            ],
+            "Other settings": [
+                ""
+            ],
+            "Enable RTL support": [
+                ""
+            ],
+            "If needed RTL support in documents": [
+                ""
+            ],
+            "More than 10 awesome invoice templates to choose from!.": [
+                ""
+            ],
+            "More options to customise and personalise the invoice templates.": [
+                ""
+            ],
+            "Compatible with woocommerce sequential order numbers.": [
+                ""
+            ],
+            "Supports different paper sizes for documents and also you can enter custom sizes.": [
+                ""
+            ],
+            "Option to add SSN, VAT fields at checkout and it can show in the invoice document": [
+                ""
+            ],
+            "More customization options for packing slips, shipping label and other documents.": [
+                ""
+            ],
+            "Credit note generation for order refunds.": [
+                ""
+            ],
+            "Meta field to add order tracking number(if you have) on the order detail page, which will be displayed on shipping label document.": [
+                ""
+            ],
+            "Option to attach other pdf files like privacy policy, return policy etc with invoice mails.": [
+                ""
+            ],
+            "Compatible with woocommerce subscription plugin renewal orders in woocommerce order page.": [
+                ""
+            ],
+            "Provision to add paid stamp on invoice documents.": [
+                ""
+            ],
+            "Provision to add signature on invoice documents.": [
+                ""
+            ],
+            "Upgrade to Premium": [
+                ""
+            ],
+            "Back": [
+                ""
+            ],
+            "View Templates": [
+                ""
+            ],
+            "Preview": [
+                ""
+            ],
+            "Save Changes": [
+                ""
+            ],
+            "Updating": [
+                ""
+            ],
+            "Updated": [
+                ""
+            ],
+            "Click Here To Add Company Logo": [
+                ""
+            ],
+            "Click Here To Add Company Name": [
+                ""
+            ],
+            "Paypal": [
+                ""
+            ],
+            "FedEx": [
+                ""
+            ],
+            "This is a customer note": [
+                ""
+            ],
+            "Subtotal": [
+                ""
+            ],
+            "Discount": [
+                ""
+            ],
+            "Discount Tax": [
+                ""
+            ],
+            "Shipping": [
+                ""
+            ],
+            "Shipping Tax": [
+                ""
+            ],
+            "Fee": [
+                ""
+            ],
+            "Grid Module": [
+                ""
+            ],
+            "You can edit columns and data selections": [
+                ""
+            ],
+            "Warning": [
+                ""
+            ],
+            "Are you sure you want to reset this template now?": [
+                ""
+            ],
+            "Cancel": [
+                ""
+            ],
+            "Reset Now": [
+                ""
+            ],
+            "Resetting": [
+                ""
+            ],
+            "Template Successfully Resetted": [
+                ""
+            ],
+            "Templates": [
+                ""
+            ],
+            "Active": [
+                ""
+            ],
+            "Choose this template": [
+                ""
+            ]
+        }
+    }
+}

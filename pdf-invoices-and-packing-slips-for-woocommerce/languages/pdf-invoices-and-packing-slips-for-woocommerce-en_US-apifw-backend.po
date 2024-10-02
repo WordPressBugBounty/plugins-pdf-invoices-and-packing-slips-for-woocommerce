@@ -1,0 +1,959 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: backend.js
+msgid "Billing Address"
+msgstr ""
+
+#: backend.js
+msgid "Title"
+msgstr ""
+
+#: backend.js
+msgid "Font Family"
+msgstr ""
+
+#: backend.js
+msgid "Font Size"
+msgstr ""
+
+#: backend.js
+msgid "Font Weight"
+msgstr ""
+
+#: backend.js
+msgid "Font Style"
+msgstr ""
+
+#: backend.js
+msgid "Font Colour"
+msgstr ""
+
+#: backend.js
+msgid "Text Align"
+msgstr ""
+
+#: backend.js
+msgid "Element Styles"
+msgstr ""
+
+#: backend.js
+msgid "Colour Theme"
+msgstr ""
+
+#: backend.js
+msgid "Company Logo"
+msgstr ""
+
+#: backend.js
+msgid "Display"
+msgstr ""
+
+#: backend.js
+msgid "Width"
+msgstr ""
+
+#: backend.js
+msgid "Height"
+msgstr ""
+
+#: backend.js
+msgid "Extra Details"
+msgstr ""
+
+#: backend.js
+msgid "Extra Details Font Family"
+msgstr ""
+
+#: backend.js
+msgid "Extra Details Font Size"
+msgstr ""
+
+#: backend.js
+msgid "Extra Details Font Weight"
+msgstr ""
+
+#: backend.js
+msgid "Extra Details Font Style"
+msgstr ""
+
+#: backend.js
+msgid "Extra Details Font colour"
+msgstr ""
+
+#: backend.js
+msgid "Customer Note"
+msgstr ""
+
+#: backend.js
+msgid "Label"
+msgstr ""
+
+#: backend.js
+msgid "Content Colour"
+msgstr ""
+
+#: backend.js
+msgid "Label Colour"
+msgstr ""
+
+#: backend.js
+msgid "From Address"
+msgstr ""
+
+#: backend.js
+msgid "Elements Visibility & Styles"
+msgstr ""
+
+#: backend.js
+msgid "Sender"
+msgstr ""
+
+#: backend.js
+msgid "Address1"
+msgstr ""
+
+#: backend.js
+msgid "Address2"
+msgstr ""
+
+#: backend.js
+msgid "City"
+msgstr ""
+
+#: backend.js
+msgid "Country"
+msgstr ""
+
+#: backend.js
+msgid "Postal Code"
+msgstr ""
+
+#: backend.js
+msgid "Email ID"
+msgstr ""
+
+#: backend.js
+msgid "Phone No"
+msgstr ""
+
+#: backend.js
+msgid "VAT/GST Registration No"
+msgstr ""
+
+#: backend.js
+msgid "VAT/GST Registration No Label"
+msgstr ""
+
+#: backend.js
+msgid "Invoice Date"
+msgstr ""
+
+#: backend.js
+msgid "Format"
+msgstr ""
+
+#: backend.js
+msgid "Date Colour"
+msgstr ""
+
+#: backend.js
+msgid "Footer"
+msgstr ""
+
+#: backend.js
+msgid "Text Colour"
+msgstr ""
+
+#: backend.js
+msgid "Invoice Number"
+msgstr ""
+
+#: backend.js
+msgid "Number Colour"
+msgstr ""
+
+#: backend.js
+msgid "General Settings"
+msgstr ""
+
+#: backend.js
+msgid "Document Settings"
+msgstr ""
+
+#: backend.js
+msgid "Help & Support"
+msgstr ""
+
+#: backend.js
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: backend.js
+msgid "Order Date"
+msgstr ""
+
+#: backend.js
+msgid "Order Number"
+msgstr ""
+
+#: backend.js
+msgid "Payment Method"
+msgstr ""
+
+#: backend.js
+msgid "Method Colour"
+msgstr ""
+
+#: backend.js
+msgid "Product Table"
+msgstr ""
+
+#: backend.js
+msgid "Table Elements Visibility"
+msgstr ""
+
+#: backend.js
+msgid "SKU"
+msgstr ""
+
+#: backend.js
+msgid "Product Name"
+msgstr ""
+
+#: backend.js
+msgid "Price"
+msgstr ""
+
+#: backend.js
+msgid "Quantity"
+msgstr ""
+
+#: backend.js
+msgid "Tax Rate"
+msgstr ""
+
+#: backend.js
+msgid "Tax Type"
+msgstr ""
+
+#: backend.js
+msgid "Tax Value"
+msgstr ""
+
+#: backend.js
+msgid "Total"
+msgstr ""
+
+#: backend.js
+msgid "Table Head Labels"
+msgstr ""
+
+#: backend.js
+msgid "Table Head Styles"
+msgstr ""
+
+#: backend.js
+msgid "Background Colour"
+msgstr ""
+
+#: backend.js
+msgid "Border Colour"
+msgstr ""
+
+#: backend.js
+msgid "Table Body Styles"
+msgstr ""
+
+#: backend.js
+msgid "Shipping Address"
+msgstr ""
+
+#: backend.js
+msgid "Shipping Method"
+msgstr ""
+
+#: backend.js
+msgid "Pending Payment"
+msgstr ""
+
+#: backend.js
+msgid "Processing"
+msgstr ""
+
+#: backend.js
+msgid "On Hold"
+msgstr ""
+
+#: backend.js
+msgid "Completed"
+msgstr ""
+
+#: backend.js
+msgid "Cancelled"
+msgstr ""
+
+#: backend.js
+msgid "Refunded"
+msgstr ""
+
+#: backend.js
+msgid "Failed"
+msgstr ""
+
+#: backend.js
+msgid "Draft"
+msgstr ""
+
+#: backend.js
+msgid "[number]"
+msgstr ""
+
+#: backend.js
+msgid "[number][suffix]"
+msgstr ""
+
+#: backend.js
+msgid "[prefix][number]"
+msgstr ""
+
+#: backend.js
+msgid "[prefix][number][suffix]"
+msgstr ""
+
+#: backend.js
+msgid "The document types"
+msgstr ""
+
+#: backend.js
+msgid "Invoice"
+msgstr ""
+
+#: backend.js
+msgid "Enabled"
+msgstr ""
+
+#: backend.js
+msgid "Disabled"
+msgstr ""
+
+#: backend.js
+msgid "Packing Slip"
+msgstr ""
+
+#: backend.js
+msgid "Shipping Label"
+msgstr ""
+
+#: backend.js
+msgid "Delivery Note"
+msgstr ""
+
+#: backend.js
+msgid "Dispatch Label"
+msgstr ""
+
+#: backend.js
+msgid "Invoice settings"
+msgstr ""
+
+#: backend.js
+msgid "Configure the invoice settings from the options below."
+msgstr ""
+
+#: backend.js
+msgid "Customize Layout"
+msgstr ""
+
+#: backend.js
+msgid "Enable Invoice"
+msgstr ""
+
+#: backend.js
+msgid "Invoice Name"
+msgstr ""
+
+#: backend.js
+msgid "Use Order date as Invoice date"
+msgstr ""
+
+#: backend.js
+msgid "Genarate invoice for order statuses"
+msgstr ""
+
+#: backend.js
+msgid "Choose Order Status"
+msgstr ""
+
+#: backend.js
+msgid "Order statuses for which invoice need to be generated."
+msgstr ""
+
+#: backend.js
+msgid "Additonal user roles who can access invoice"
+msgstr ""
+
+#: backend.js
+msgid "Choose User Role"
+msgstr ""
+
+#: backend.js
+msgid "Extra user roles who can access invoice."
+msgstr ""
+
+#: backend.js
+msgid "Generate invoice for free orders"
+msgstr ""
+
+#: backend.js
+msgid "Display free line items in the invoice"
+msgstr ""
+
+#: backend.js
+msgid "Invoice number format"
+msgstr ""
+
+#: backend.js
+msgid "Select"
+msgstr ""
+
+#: backend.js
+msgid "Next Invoice No."
+msgstr ""
+
+#: backend.js
+msgid "Reset"
+msgstr ""
+
+#: backend.js
+msgid "Invoice No. Prefix"
+msgstr ""
+
+#: backend.js
+msgid "Invoice No. Suffix"
+msgstr ""
+
+#: backend.js
+msgid "Invoice length"
+msgstr ""
+
+#: backend.js
+msgid ""
+"The total length of the invoice number, excluding the length of prefix and "
+"suffix. If the length of the generated invoice number is less than the "
+"provided, it will be padded with ‘0’. E.g if you set 6 as invoice length "
+"and invoice number is 2005, it will be represented as 002005 in the "
+"respective documents."
+msgstr ""
+
+#: backend.js
+msgid "Attach invoice PDF in email"
+msgstr ""
+
+#: backend.js
+msgid "PDF of active invoice template will be attached with the order email"
+msgstr ""
+
+#: backend.js
+msgid "Enable print invoice option for customers"
+msgstr ""
+
+#: backend.js
+msgid "Add invoice button to the order detail and thank you page"
+msgstr ""
+
+#: backend.js
+msgid "Custom logo for invoice"
+msgstr ""
+
+#: backend.js
+msgid "Upload"
+msgstr ""
+
+#: backend.js
+msgid "If leave it as blank, defaulted to logo from General settings."
+msgstr ""
+
+#: backend.js
+msgid "Custom CSS"
+msgstr ""
+
+#: backend.js
+msgid "Check MPDF supported CSS attributes "
+msgstr ""
+
+#: backend.js
+msgid "Package Slip Settings"
+msgstr ""
+
+#: backend.js
+msgid "Configure the package slip settings from the options below."
+msgstr ""
+
+#: backend.js
+msgid "Enable Package slip"
+msgstr ""
+
+#: backend.js
+msgid "Packing slip per item"
+msgstr ""
+
+#: backend.js
+msgid "Include product image"
+msgstr ""
+
+#: backend.js
+msgid "Add product image in product table"
+msgstr ""
+
+#: backend.js
+msgid "Add customer note"
+msgstr ""
+
+#: backend.js
+msgid "Add customer note in packing list"
+msgstr ""
+
+#: backend.js
+msgid "Add footer"
+msgstr ""
+
+#: backend.js
+msgid "Add footer in packing list"
+msgstr ""
+
+#: backend.js
+msgid "Date Format"
+msgstr ""
+
+#: backend.js
+msgid "Label Settings"
+msgstr ""
+
+#: backend.js
+msgid "Date label"
+msgstr ""
+
+#: backend.js
+msgid "Order number label"
+msgstr ""
+
+#: backend.js
+msgid "From address title"
+msgstr ""
+
+#: backend.js
+msgid "Billing address title"
+msgstr ""
+
+#: backend.js
+msgid "Shipping address title"
+msgstr ""
+
+#: backend.js
+msgid "Table image column label"
+msgstr ""
+
+#: backend.js
+msgid "Table sku label"
+msgstr ""
+
+#: backend.js
+msgid "Table product name label"
+msgstr ""
+
+#: backend.js
+msgid "Table quantity label"
+msgstr ""
+
+#: backend.js
+msgid "Table weight label"
+msgstr ""
+
+#: backend.js
+msgid "Style Settings"
+msgstr ""
+
+#: backend.js
+msgid "Heading color"
+msgstr ""
+
+#: backend.js
+msgid "Table header background color"
+msgstr ""
+
+#: backend.js
+msgid "Table header border color"
+msgstr ""
+
+#: backend.js
+msgid "Table header font color"
+msgstr ""
+
+#: backend.js
+msgid "Table body background color"
+msgstr ""
+
+#: backend.js
+msgid "Table body border color"
+msgstr ""
+
+#: backend.js
+msgid "Table body font color"
+msgstr ""
+
+#: backend.js
+msgid "Shipping label"
+msgstr ""
+
+#: backend.js
+msgid "Configure the shipping label from the options below."
+msgstr ""
+
+#: backend.js
+msgid "Enable Shipping Label"
+msgstr ""
+
+#: backend.js
+msgid "Show logo"
+msgstr ""
+
+#: backend.js
+msgid "Logo in general settings will be displayed on generated document."
+msgstr ""
+
+#: backend.js
+msgid "Add footer in shipping label"
+msgstr ""
+
+#: backend.js
+msgid "Enable barcode"
+msgstr ""
+
+#: backend.js
+msgid "If needed barcode on the generated document."
+msgstr ""
+
+#: backend.js
+msgid "Order no label"
+msgstr ""
+
+#: backend.js
+msgid "Weight label"
+msgstr ""
+
+#: backend.js
+msgid "To address title"
+msgstr ""
+
+#: backend.js
+msgid "Email label"
+msgstr ""
+
+#: backend.js
+msgid "Phone number label"
+msgstr ""
+
+#: backend.js
+msgid "Tracking number label"
+msgstr ""
+
+#: backend.js
+msgid "Delivery Note Settings"
+msgstr ""
+
+#: backend.js
+msgid "Configure the delivery note from the options below."
+msgstr ""
+
+#: backend.js
+msgid "Enable Delivery Note"
+msgstr ""
+
+#: backend.js
+msgid "Add customer note in delivery note"
+msgstr ""
+
+#: backend.js
+msgid "Add footer in delivery note"
+msgstr ""
+
+#: backend.js
+msgid "Configure the dispatch label from the options below."
+msgstr ""
+
+#: backend.js
+msgid "Enable Dispatch Label"
+msgstr ""
+
+#: backend.js
+msgid "Add customer note in dispatch label"
+msgstr ""
+
+#: backend.js
+msgid "Add footer in dispatch label"
+msgstr ""
+
+#: backend.js
+msgid "Update Settings"
+msgstr ""
+
+#: backend.js
+msgid "Saving Settings"
+msgstr ""
+
+#: backend.js
+msgid "Changes Saved"
+msgstr ""
+
+#: backend.js
+msgid "Company info"
+msgstr ""
+
+#: backend.js
+msgid ""
+"The company, shipping address and from address details in the sections "
+"below will be used to fill up the invoice and related documents accordingly."
+msgstr ""
+
+#: backend.js
+msgid "Name"
+msgstr ""
+
+#: backend.js
+msgid "Logo"
+msgstr ""
+
+#: backend.js
+msgid "Upload a logo which will be used across the documents"
+msgstr ""
+
+#: backend.js
+msgid "Add footer text for the documents."
+msgstr ""
+
+#: backend.js
+msgid "Address(Sender details)"
+msgstr ""
+
+#: backend.js
+msgid "Department/Sender"
+msgstr ""
+
+#: backend.js
+msgid "Address line 1"
+msgstr ""
+
+#: backend.js
+msgid "Address line 2"
+msgstr ""
+
+#: backend.js
+msgid "Country/State"
+msgstr ""
+
+#: backend.js
+msgid "Postal code"
+msgstr ""
+
+#: backend.js
+msgid "Contact number"
+msgstr ""
+
+#: backend.js
+msgid "Email"
+msgstr ""
+
+#: backend.js
+msgid "VAT/GST Registration Number"
+msgstr ""
+
+#: backend.js
+msgid "Other settings"
+msgstr ""
+
+#: backend.js
+msgid "Enable RTL support"
+msgstr ""
+
+#: backend.js
+msgid "If needed RTL support in documents"
+msgstr ""
+
+#: backend.js
+msgid "More than 10 awesome invoice templates to choose from!."
+msgstr ""
+
+#: backend.js
+msgid "More options to customise and personalise the invoice templates."
+msgstr ""
+
+#: backend.js
+msgid "Compatible with woocommerce sequential order numbers."
+msgstr ""
+
+#: backend.js
+msgid ""
+"Supports different paper sizes for documents and also you can enter custom "
+"sizes."
+msgstr ""
+
+#: backend.js
+msgid ""
+"Option to add SSN, VAT fields at checkout and it can show in the invoice "
+"document"
+msgstr ""
+
+#: backend.js
+msgid ""
+"More customization options for packing slips, shipping label and other "
+"documents."
+msgstr ""
+
+#: backend.js
+msgid "Credit note generation for order refunds."
+msgstr ""
+
+#: backend.js
+msgid ""
+"Meta field to add order tracking number(if you have) on the order detail "
+"page, which will be displayed on shipping label document."
+msgstr ""
+
+#: backend.js
+msgid ""
+"Option to attach other pdf files like privacy policy, return policy etc "
+"with invoice mails."
+msgstr ""
+
+#: backend.js
+msgid ""
+"Compatible with woocommerce subscription plugin renewal orders in "
+"woocommerce order page."
+msgstr ""
+
+#: backend.js
+msgid "Provision to add paid stamp on invoice documents."
+msgstr ""
+
+#: backend.js
+msgid "Provision to add signature on invoice documents."
+msgstr ""
+
+#: backend.js
+msgid "Upgrade to Premium"
+msgstr ""
+
+#: backend.js
+msgid "Back"
+msgstr ""
+
+#: backend.js
+msgid "View Templates"
+msgstr ""
+
+#: backend.js
+msgid "Preview"
+msgstr ""
+
+#: backend.js
+msgid "Save Changes"
+msgstr ""
+
+#: backend.js
+msgid "Updating"
+msgstr ""
+
+#: backend.js
+msgid "Updated"
+msgstr ""
+
+#: backend.js
+msgid "Click Here To Add Company Logo"
+msgstr ""
+
+#: backend.js
+msgid "Click Here To Add Company Name"
+msgstr ""
+
+#: backend.js
+msgid "Paypal"
+msgstr ""
+
+#: backend.js
+msgid "FedEx"
+msgstr ""
+
+#: backend.js
+msgid "This is a customer note"
+msgstr ""
+
+#: backend.js
+msgid "Subtotal"
+msgstr ""
+
+#: backend.js
+msgid "Discount"
+msgstr ""
+
+#: backend.js
+msgid "Discount Tax"
+msgstr ""
+
+#: backend.js
+msgid "Shipping"
+msgstr ""
+
+#: backend.js
+msgid "Shipping Tax"
+msgstr ""
+
+#: backend.js
+msgid "Fee"
+msgstr ""
+
+#: backend.js
+msgid "Grid Module"
+msgstr ""
+
+#: backend.js
+msgid "You can edit columns and data selections"
+msgstr ""
+
+#: backend.js
+msgid "Warning"
+msgstr ""
+
+#: backend.js
+msgid "Are you sure you want to reset this template now?"
+msgstr ""
+
+#: backend.js
+msgid "Cancel"
+msgstr ""
+
+#: backend.js
+msgid "Reset Now"
+msgstr ""
+
+#: backend.js
+msgid "Resetting"
+msgstr ""
+
+#: backend.js
+msgid "Template Successfully Resetted"
+msgstr ""
+
+#: backend.js
+msgid "Templates"
+msgstr ""
+
+#: backend.js
+msgid "Active"
+msgstr ""
+
+#: backend.js
+msgid "Choose this template"
+msgstr ""

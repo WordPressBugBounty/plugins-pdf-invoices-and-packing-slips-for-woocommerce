@@ -1,0 +1,310 @@
+# Copyright (C) 2022 Acowebs
+# This file is distributed under the same license as the PDF Invoices and Packing Slips For WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: PDF Invoices and Packing Slips For WooCommerce 1.2.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pdf-invoices-for-woocommerce-free\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-08-08T04:59:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: pdf-invoices-and-packing-slips-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "PDF Invoices and Packing Slips For WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customize and print invoices and packing slips for WooCommerce orders"
+msgstr ""
+
+#. Author of the plugin
+msgid "Acowebs"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://acowebs.com"
+msgstr ""
+
+#: includes/class-apifw-api.php:761
+#: includes/class-apifw-api.php:769
+#: includes/class-apifw-backend.php:641
+msgid "Invoice 001"
+msgstr ""
+
+#: includes/class-apifw-backend.php:178
+msgid "Configure"
+msgstr ""
+
+#: includes/class-apifw-backend.php:693
+#: includes/class-apifw-backend.php:706
+#: includes/class-apifw-backend.php:707
+#: includes/class-apifw-backend.php:708
+msgid "Invoice Templates"
+msgstr ""
+
+#: includes/class-apifw-backend.php:709
+#: includes/class-apifw-backend.php:710
+msgid "Add New Template"
+msgstr ""
+
+#: includes/class-apifw-backend.php:711
+#: includes/class-apifw-backend.php:712
+msgid "Edit Template"
+msgstr ""
+
+#: includes/class-apifw-backend.php:713
+msgid "New Template"
+msgstr ""
+
+#: includes/class-apifw-backend.php:714
+#: includes/class-apifw-backend.php:715
+msgid "View Template"
+msgstr ""
+
+#: includes/class-apifw-backend.php:716
+msgid "Search Templates"
+msgstr ""
+
+#: includes/class-apifw-backend.php:717
+msgid "No Templates Found"
+msgstr ""
+
+#: includes/class-apifw-backend.php:718
+msgid "No Templates Found in Trash"
+msgstr ""
+
+#: includes/class-apifw-backend.php:719
+msgid "Parent Template"
+msgstr ""
+
+#: includes/class-apifw-backend.php:777
+msgid "PDF Invoice For WooCommerce"
+msgstr ""
+
+#: includes/class-apifw-backend.php:778
+msgid "PDF Invoice"
+msgstr ""
+
+#: includes/class-apifw-backend.php:879
+msgid "Invoice & Labels"
+msgstr ""
+
+#: includes/class-apifw-backend.php:896
+msgid "Invoice Number"
+msgstr ""
+
+#: includes/class-apifw-backend.php:900
+#: includes/class-apifw-backend.php:967
+#: includes/class-apifw-backend.php:1003
+msgid "Preview Invoice"
+msgstr ""
+
+#: includes/class-apifw-backend.php:903
+#: includes/class-apifw-backend.php:1004
+#: includes/class-apifw-invoice.php:1373
+msgid "Download Invoice"
+msgstr ""
+
+#: includes/class-apifw-backend.php:908
+msgid "Generate Invoice"
+msgstr ""
+
+#: includes/class-apifw-backend.php:916
+#: includes/class-apifw-backend.php:972
+#: includes/class-apifw-backend.php:1007
+#: packing-slip-templates/ps-classic.php:20
+msgid "Packing Slip"
+msgstr ""
+
+#: includes/class-apifw-backend.php:923
+#: includes/class-apifw-backend.php:977
+#: includes/class-apifw-backend.php:1010
+#: includes/class-apifw-delivery-note.php:121
+msgid "Delivery Note"
+msgstr ""
+
+#: includes/class-apifw-backend.php:930
+#: includes/class-apifw-backend.php:982
+#: includes/class-apifw-backend.php:1013
+#: shipping-label-templates/sl-classic.php:20
+msgid "Shipping Label"
+msgstr ""
+
+#: includes/class-apifw-backend.php:937
+#: includes/class-apifw-backend.php:987
+#: includes/class-apifw-backend.php:1016
+#: includes/class-apifw-dispatch-label.php:121
+msgid "Dispatch Label"
+msgstr ""
+
+#: includes/class-apifw-backend.php:950
+msgid "Documents"
+msgstr ""
+
+#: includes/class-apifw-backend.php:967
+#: includes/class-apifw-invoice.php:1398
+msgid "Invoice"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:311
+#: includes/class-apifw-dispatch-label.php:363
+msgid "Order No"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:313
+#: includes/class-apifw-dispatch-label.php:365
+msgid "Date"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:317
+#: includes/class-apifw-dispatch-label.php:372
+msgid "From Address"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:351
+#: includes/class-apifw-dispatch-label.php:403
+msgid "Billing Address"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:391
+#: includes/class-apifw-dispatch-label.php:443
+msgid "Shipping Address"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:423
+#: includes/class-apifw-dispatch-label.php:475
+#: packing-slip-templates/ps-classic.php:321
+#: packing-slip-templates/ps-classic.php:504
+msgid "Customer Note"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:433
+msgid "Image"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:435
+#: includes/class-apifw-dispatch-label.php:485
+msgid "SKU"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:436
+#: includes/class-apifw-dispatch-label.php:486
+msgid "Product"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:437
+#: includes/class-apifw-dispatch-label.php:487
+msgid "Quantity"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:438
+msgid "Total Weight"
+msgstr ""
+
+#: includes/class-apifw-delivery-note.php:462
+#: includes/helpers.php:155
+#: includes/helpers.php:156
+#: includes/helpers.php:157
+#: packing-slip-templates/ps-classic.php:359
+#: packing-slip-templates/ps-classic.php:543
+#: shipping-label-templates/sl-classic.php:225
+msgid "N/A"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:361
+msgid "Invoice No"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:367
+msgid "Tax Reg. No"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:488
+msgid "Price"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:489
+msgid "Tax Rate"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:490
+msgid "Tax Type"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:491
+msgid "Tax Value"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:492
+#: includes/class-apifw-dispatch-label.php:547
+#: includes/class-apifw-invoice.php:931
+#: includes/class-apifw-invoice.php:1199
+msgid "Total"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:523
+#: includes/class-apifw-invoice.php:907
+#: includes/class-apifw-invoice.php:1175
+msgid "Subtotal"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:527
+#: includes/class-apifw-invoice.php:911
+#: includes/class-apifw-invoice.php:1179
+msgid "Discount"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:531
+#: includes/class-apifw-invoice.php:915
+#: includes/class-apifw-invoice.php:1183
+msgid "Discount Tax"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:535
+#: includes/class-apifw-invoice.php:919
+#: includes/class-apifw-invoice.php:1187
+msgid "Shipping"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:539
+#: includes/class-apifw-invoice.php:923
+#: includes/class-apifw-invoice.php:1191
+msgid "Shipping Tax"
+msgstr ""
+
+#: includes/class-apifw-dispatch-label.php:543
+#: includes/class-apifw-invoice.php:927
+#: includes/class-apifw-invoice.php:1195
+msgid "Fee"
+msgstr ""
+
+#: includes/class-apifw-front-end.php:101
+msgid "You are not allowed to view this page."
+msgstr ""
+
+#: includes/class-apifw-front-end.php:102
+msgid "Access denied !!!."
+msgstr ""
+
+#: includes/class-apifw-front-end.php:130
+msgid "Wrong action"
+msgstr ""
+
+#: includes/class-apifw-front-end.php:142
+#: includes/class-apifw-front-end.php:164
+msgid "Wrong document"
+msgstr ""
+
+#: includes/class-apifw-front-end.php:148
+#: includes/class-apifw-front-end.php:151
+msgid "Order not found"
+msgstr ""
+
+#: includes/class-apifw-invoice.php:1372
+msgid "Print Invoice"
+msgstr ""
