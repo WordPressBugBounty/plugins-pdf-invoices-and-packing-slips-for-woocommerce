@@ -5,8 +5,8 @@ Contributors: acowebs
 Donate link:
 Tags: PDF Invoices, Invoices, Packing Slips, Shipping Labels, Delivery Notes, Dispatch Labels, Print Invoices
 Requires at least: 4.4.0
-Tested up to: 6.5
-Stable tag: 1.3.9
+Tested up to: 6.6
+Stable tag: 1.4.0
 
 == Description ==
 WooCommerce PDF Invoice plugin helps to generate custom designed invoices for a WooCommerce store. Apart from the Invoice, this plugin can also be used to generate Packing Slips, Delivery Notes and Shipping Labels from within WooCommerce orders.
@@ -110,6 +110,10 @@ Yes, customer can download invoice from order detail page from my-account sectio
 It will be auto incremented according to new order. There are reset option also exisist for invoice number.
 
 == Changelog ==
+
+= 1.4.0 =
+* WordPress 6.6.x Support
+* WooCommerce 9.3.x Support
 = 1.3.9 =
 * WordPress 6.5.x Support
 * WooCommerce 8.7.x Support
@@ -199,7 +203,7 @@ It will be auto incremented according to new order. There are reset option also 
 = 1.0.8 =
 * WooCommerce 5.0.0 Support
 * WordPress 5.6.1 Support
-* custom css option for invoice 
+* custom css option for invoice
 = 1.0.7 =
 * WooCommerce 4.9.0 Support
 * Bug fixes

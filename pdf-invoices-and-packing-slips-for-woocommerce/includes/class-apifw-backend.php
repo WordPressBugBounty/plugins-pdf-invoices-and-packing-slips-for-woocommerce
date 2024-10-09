@@ -201,7 +201,7 @@ class APIFW_Backend
         $config = '<a href="' . admin_url( 'admin.php?page='.APIFW_TOKEN.'-admin-ui/' ) . '">' . __( 'Configure', 'pdf-invoices-and-packing-slips-for-woocommerce' ) . '</a>';
         $upgrade = '<a href="https://acowebs.com/woocommerce-pdf-invoices-and-packing-slips/" style="color:#006AFF;">' . __( 'Upgrade to Pro', 'pdf-invoices-and-packing-slips-for-woocommerce' ) . '</a>';
         array_push( $links, $config, $upgrade );
-        
+
         return $links;
     }
 
@@ -238,7 +238,7 @@ class APIFW_Backend
 			return false;
 		}
     }
-    
+
     /**
 	 * WooCommerce not active notice.
      * @access  public
@@ -250,7 +250,7 @@ class APIFW_Backend
 		$message = '<div class="error"><p>' . $error . '</p></div>';
 		echo $message;
     }
-    
+
     /**
 	 * Add plugin basic settings
      * @access private
@@ -395,7 +395,7 @@ class APIFW_Backend
             'thumbnail' => $this->assets_url.'images/invoice-temp1.png',
             'color' => '#4647C6',
             'fontFamily' => 'Roboto',
-            'logo' => 
+            'logo' =>
             array (
                 'status' => true,
                 'display' => 'Company Logo',
@@ -407,7 +407,7 @@ class APIFW_Backend
                 'fontWeight' => 'bold',
                 'fontStyle' => 'normal',
                 'fontColor' => '#4647C6',
-                'extra' => 
+                'extra' =>
                 array (
                     'content' => '',
                     'fontFamily' => 'Roboto',
@@ -417,7 +417,7 @@ class APIFW_Backend
                     'fontColor' => '#545d66',
                 ),
             ),
-            'invoiceNumber' => 
+            'invoiceNumber' =>
             array (
                 'status' => true,
                 'label' => 'INVOICE:',
@@ -428,7 +428,7 @@ class APIFW_Backend
                 'NumColor' => '#545d66',
                 'labelColor' => '#545d66',
             ),
-            'orderNumber' => 
+            'orderNumber' =>
             array (
                 'status' => true,
                 'label' => 'Order No:',
@@ -439,7 +439,7 @@ class APIFW_Backend
                 'NumColor' => '#545d66',
                 'labelColor' => '#545d66',
             ),
-            'invoiceDate' => 
+            'invoiceDate' =>
             array (
                 'status' => true,
                 'label' => 'Invoice Date:',
@@ -451,7 +451,7 @@ class APIFW_Backend
                 'dateColor' => '#545d66',
                 'labelColor' => '#545d66',
             ),
-            'orderDate' => 
+            'orderDate' =>
             array (
                 'status' => true,
                 'label' => 'Order Date:',
@@ -463,7 +463,7 @@ class APIFW_Backend
                 'dateColor' => '#545d66',
                 'labelColor' => '#545d66',
             ),
-            'customerNote' => 
+            'customerNote' =>
             array (
                 'status' => true,
                 'label' => 'Customer Note:',
@@ -474,10 +474,10 @@ class APIFW_Backend
                 'contentColor' => '#545d66',
                 'labelColor' => '#545d66',
             ),
-            'fromAddress' => 
+            'fromAddress' =>
             array (
                 'status' => true,
-                'title' => 
+                'title' =>
                 array (
                     'value' => 'From Address',
                     'fontFamily' => 'Roboto',
@@ -487,7 +487,7 @@ class APIFW_Backend
                     'fontColor' => '#4647C6',
                     'aligns' => 'left',
                 ),
-                'content' => 
+                'content' =>
                 array (
                     'fontFamily' => 'Roboto',
                     'fontSize' => 14,
@@ -497,7 +497,7 @@ class APIFW_Backend
                     'aligns' => 'left',
                 ),
                 'vatLabel' => 'VAT Registration Number:',
-                'visbility' => 
+                'visbility' =>
                 array (
                     'sender' => true,
                     'addr1' => true,
@@ -510,10 +510,10 @@ class APIFW_Backend
                     'vat' => true,
                 ),
             ),
-            'billingAddress' => 
+            'billingAddress' =>
             array (
                 'status' => true,
-                'title' => 
+                'title' =>
                 array (
                     'value' => 'Billing Address',
                     'fontFamily' => 'Roboto',
@@ -523,7 +523,7 @@ class APIFW_Backend
                     'fontColor' => '#4647C6',
                     'aligns' => 'left',
                 ),
-                'content' => 
+                'content' =>
                 array (
                     'fontFamily' => 'Roboto',
                     'fontSize' => 14,
@@ -533,10 +533,10 @@ class APIFW_Backend
                     'aligns' => 'left',
                 ),
             ),
-            'shippingAddress' => 
+            'shippingAddress' =>
             array (
                 'status' => true,
-                'title' => 
+                'title' =>
                 array (
                     'value' => 'Shipping Address',
                     'fontFamily' => 'Roboto',
@@ -546,7 +546,7 @@ class APIFW_Backend
                     'fontColor' => '#4647C6',
                     'aligns' => 'left',
                 ),
-                'content' => 
+                'content' =>
                 array (
                     'fontFamily' => 'Roboto',
                     'fontSize' => 14,
@@ -556,7 +556,7 @@ class APIFW_Backend
                     'aligns' => 'left',
                 ),
             ),
-            'paymentMethod' => 
+            'paymentMethod' =>
             array (
                 'status' => true,
                 'label' => 'Payment Method:',
@@ -567,7 +567,7 @@ class APIFW_Backend
                 'methodColor' => '#545d66',
                 'labelColor' => '#545d66',
             ),
-            'shippingMethod' => 
+            'shippingMethod' =>
             array (
                 'status' => true,
                 'label' => 'Shipping Method:',
@@ -578,7 +578,7 @@ class APIFW_Backend
                 'methodColor' => '#545d66',
                 'labelColor' => '#545d66',
             ),
-            'footer' => 
+            'footer' =>
             array (
                 'status' => true,
                 'fontFamily' => 'Roboto',
@@ -588,53 +588,53 @@ class APIFW_Backend
                 'aligns' => 'left',
                 'color' => '#545d66',
             ),
-            'productTable' => 
+            'productTable' =>
             array (
                 'status' => true,
-                'elements' => 
+                'elements' =>
                 array (
-                    'sku' => 
+                    'sku' =>
                     array (
                         'status' => true,
                         'label' => 'SKU',
                     ),
-                    'productName' => 
+                    'productName' =>
                     array (
                         'status' => true,
                         'label' => 'Product',
                     ),
-                    'quantity' => 
+                    'quantity' =>
                     array (
                         'status' => true,
                         'label' => 'Quantity',
                     ),
-                    'price' => 
+                    'price' =>
                     array (
                         'status' => true,
                         'label' => 'Price',
                     ),
-                    'taxrate' => 
+                    'taxrate' =>
                     array (
                         'status' => true,
                         'label' => 'Tax Rate',
                     ),
-                    'taxtype' => 
+                    'taxtype' =>
                     array (
                         'status' => true,
                         'label' => 'Tax Type',
                     ),
-                    'taxvalue' => 
+                    'taxvalue' =>
                     array (
                         'status' => true,
                         'label' => 'Tax Value',
                     ),
-                    'total' => 
+                    'total' =>
                     array (
                         'status' => true,
                         'label' => 'Total',
                     ),
                 ),
-                'head' => 
+                'head' =>
                 array (
                     'bgcolor' => '#fff',
                     'fontColor' => '#4647C6',
@@ -645,7 +645,7 @@ class APIFW_Backend
                     'aligns' => 'center',
                     'borderColor' => '#4647C6',
                 ),
-                'body' => 
+                'body' =>
                 array (
                     'bgcolor' => '#fff',
                     'fontColor' => '#1B2733',
@@ -660,7 +660,7 @@ class APIFW_Backend
         );
         // $invoice_template_serialize = maybe_serialize( $default_invoice_template );
 
-        // adding default invoice template && saving its id 
+        // adding default invoice template && saving its id
         if ( false === get_option($this->_token.'_invoice_active_template_id') ){
             $inv_templt_post = array(
                 'post_type' => 'apifw_inv_templates',
@@ -723,11 +723,11 @@ class APIFW_Backend
                 'show_in_menu' => false,
                 'capability_type' => 'post',
                 'hierarchical' => false,
-                'query_var' => true, 
+                'query_var' => true,
                 'exclude_from_search' => true,
                 'supports' => array('title', 'thumbnail'),
                 'show_in_rest' => true,
-                'menu_icon'   => 'dashicons-buddicons-topics',		
+                'menu_icon'   => 'dashicons-buddicons-topics',
                 'labels' => array(
                     'name' => __('Invoice Templates', 'pdf-invoices-and-packing-slips-for-woocommerce'),
                     'singular_name' => __('Invoice Templates', 'pdf-invoices-and-packing-slips-for-woocommerce'),
@@ -750,7 +750,7 @@ class APIFW_Backend
 
     /**
      * Creating upload directory
-     * Secure directory with htaccess  
+     * Secure directory with htaccess
     */
     public function create_secure_upload_dir()
     {
@@ -772,8 +772,8 @@ class APIFW_Backend
                     fclose( $fh );
                 }
             }
-        }   
-        
+        }
+
         //Invoice upload directory
         if( !is_dir( APIFW_UPLOAD_INVOICE_DIR ) )
         {
@@ -883,7 +883,7 @@ class APIFW_Backend
             //Enqueue custom backend script
             wp_enqueue_script( $this->_token . '-backend', esc_url( $this->assets_url ) . 'js/backend.js', array('wp-i18n'), $this->_version, true );
             //Localize a script.
-            wp_localize_script( $this->_token . '-backend', 
+            wp_localize_script( $this->_token . '-backend',
                 'apifw_object', array(
                     'api_nonce' => wp_create_nonce('wp_rest'),
                     'root' => rest_url('apifw/v1/'),
@@ -900,7 +900,7 @@ class APIFW_Backend
             }
         }
     }
-    
+
     /**
      * Creating order page metabox
     */
@@ -919,11 +919,12 @@ class APIFW_Backend
     public function get_order_metabox_content($post_or_order_object)
     {
         //  global $post;
-        //  $order_id = $post->ID; 
+        //  $order_id = $post->ID;
         $order = ( $post_or_order_object instanceof WP_post) ? wc_get_order( $post_or_order_object->ID ) : wc_get_order( get_the_id() );
         $post_or_order_object;
-        $order_invoice_no = get_post_meta( $order->get_id(), $this->_token.'_ord_invoice_no', true );
-        
+        // $order_invoice_no = get_post_meta( $order->get_id(), $this->_token.'_ord_invoice_no', true );
+        $order_invoice_no = $order->get_meta($this->_token . '_ord_invoice_no', true);
+
         $orderids_array = array($order->get_id() );
         $orderid_enc = (urlencode(json_encode( $orderids_array )) );
 
@@ -987,7 +988,7 @@ class APIFW_Backend
         //end
         echo $content;
     }
-    
+
     /**
      * Adding New Column In Admin Order List Table
     */
@@ -1006,10 +1007,11 @@ class APIFW_Backend
         $order = ( $post_or_order_object instanceof WP_post) ? wc_get_order( $post_or_order_object->ID ) : wc_get_order( get_the_id() );
 		$post_or_order_object;
 		//$order_invoice_no = get_post_meta(get_the_id(), $this->_token.'_ord_invoice_no', true );
-	
+
+
         $orderids_array = array( get_the_id());
         $orderid_enc = (urlencode(json_encode( $orderids_array )) );
-    
+
 		if( $column == 'apifw_doc_links' ) {
             $content = '<div class="apifw_order_col_links">';
             //invoice link
@@ -1049,8 +1051,8 @@ class APIFW_Backend
 		//global $post;
 		$order = ( $post_or_order_object instanceof WP_post) ? wc_get_order( $post_or_order_object->ID ) : wc_get_order( get_the_id() );
 		$post_or_order_object;
-		//$order_invoice_no = get_post_meta(get_the_id(), $this->_token.'_ord_invoice_no', true );
 
+    // $order_invoice_no = $order->get_postmeta($this->_token.'_ord_invoice_no', true );
 		if ( ! is_object( $order ) || is_numeric( $order ) ) {
 			$orderids_array = array( $post_or_order_object->get_id());
 		}
@@ -1089,7 +1091,7 @@ class APIFW_Backend
 			echo $content;
 		}
 	}
-    
+
     /**
      * Adding Bulk Actions Admin Order List Table
      * @param actions array
@@ -1128,23 +1130,23 @@ class APIFW_Backend
         if ( $action == 'apifw_invoice_preview' ) {
             $orderid_enc = urlencode(json_encode( $order_ids_array ) );
             $url = admin_url( '?apifw_document=true&order_id='.$orderid_enc.'&type=invoice&action=preview' );
-         
+
         } elseif( $action == 'apifw_invoice_download' ) {
             $orderid_enc = urlencode(json_encode( $order_ids_array ) );
             $url = admin_url( '?apifw_document=true&order_id='.$orderid_enc.'&type=invoice&action=download' );
-          
+
         } elseif( $action == 'apifw_packing_slip' ) {
             $orderid_enc = urlencode(json_encode( $order_ids_array ) );
             $url = admin_url( '?apifw_document=true&order_id='.$orderid_enc.'&type=packing_slip&action=preview' );
-          
+
         } elseif( $action == 'apifw_delivery_note' ) {
             $orderid_enc = urlencode(json_encode( $order_ids_array ) );
             $url = admin_url( '?apifw_document=true&order_id='.$orderid_enc.'&type=delivery_note&action=preview' );
-           
+
         } elseif( $action == 'apifw_shipping_label' ) {
             $orderid_enc = urlencode(json_encode( $order_ids_array ) );
             $url = admin_url( '?apifw_document=true&order_id='.$orderid_enc.'&type=shipping_label&action=preview' );
-            
+
         } elseif( $action == 'apifw_dispatch_label' ) {
             $orderid_enc = urlencode(json_encode( $order_ids_array ) );
             $url = admin_url( '?apifw_document=true&order_id='.$orderid_enc.'&type=dispatch_label&action=preview' );
@@ -1161,7 +1163,7 @@ class APIFW_Backend
 
         echo $url;
         wp_die();
-        
+
     }
 
     /**
@@ -1170,7 +1172,7 @@ class APIFW_Backend
     public function add_deposit_page_meta_box()
     {
         add_meta_box( 'apifw-deposit-metabox', __( 'Invoice', 'pdf-invoices-and-packing-slips-for-woocommerce' ), array( $this, 'get_deposit_metabox_content' ), 'awcdp_payment', 'side', 'default' );
-        
+
     }
 
     /**
@@ -1244,7 +1246,7 @@ class APIFW_Backend
         return $actions;
     }
 
-    
+
     /**
      * Handling Content For New Column In Admin eposit Payments List Table
     */
@@ -1287,7 +1289,7 @@ class APIFW_Backend
                             if( action != 'apifw_invoice_preview' && action != 'apifw_invoice_download' ){
                                 e.preventDefault();
                             }
-                            
+
                             let order_ids = [];
                             $('tbody th.check-column input[type="checkbox"]:checked').each( function() {
                                 order_ids.push($(this).val());
@@ -1310,7 +1312,7 @@ class APIFW_Backend
                                 return;
                             }
                             exit();
-                        } 
+                        }
                     });
                 });
             </script>
