@@ -83,7 +83,7 @@ class APIFW_Invoice
                 // checking new order for generating invoice number
                 add_action( 'woocommerce_thankyou', array( $this, 'handle_new_order' ), 10, 1 );
                 // handling order status updates
-                add_action( 'woocommerce_order_status_changed', array( $this, 'handle_order_update' ), 10, 3 ); 
+                add_action( 'woocommerce_order_status_changed', array( $this, 'handle_order_update' ), 10, 3 );
             }
         }
     }
@@ -200,7 +200,7 @@ class APIFW_Invoice
     }
 
     /**
-     * Generating html template for pdf 
+     * Generating html template for pdf
      * @access  public
      * @param order_ids
      * @param action
@@ -244,7 +244,7 @@ class APIFW_Invoice
         $logo_name_style .= 'font-style: '.$logo['fontStyle'].'; ';
         $logo_name_style .= 'font-size: '.$logo['fontSize'].'px; ';
         $logo_name_style .= 'color: '.$logo['fontColor'].';';
-        
+
         $logo_img_style = '';
         if( $logo['width'] != '' &&  $logo['height'] != '' ) {
             $logo_img_style = 'width: '.$logo['width'].'px; height: '.$logo['height'].'px;';
@@ -455,7 +455,7 @@ class APIFW_Invoice
                         $html .= "
                     }
                     .top_sec {
-                        width: 100%; 
+                        width: 100%;
                         clear:both;
                         margin-top: 14px;
                         margin-bottom: 20px;
@@ -471,7 +471,7 @@ class APIFW_Invoice
                         width: 100%
                     }
                     .from_address_wrap {
-                        float:left; 
+                        float:left;
                         width: 62.666%;
                         padding-left: 4%;
                     }
@@ -486,21 +486,21 @@ class APIFW_Invoice
                         // padding-right: 1%;
                     }
                     .invoice_midsec_wrap {
-                        width: 100%; 
+                        width: 100%;
                         clear:both;
                         margin-bottom: 30px;
                     }
                     .invoice_main_info {
-                        float:left; 
+                        float:left;
                         width: 33.333%;
                     }
                     .billaddress_wrap {
-                        float:left; 
+                        float:left;
                         width: 29.333%;
                         padding-left: 4%;
                     }
                     .shipping_address_wrap {
-                        float:left; 
+                        float:left;
                         width: 29.333%;
                         padding-left: 4%;
                     }
@@ -569,10 +569,10 @@ class APIFW_Invoice
                         padding-left: 0%;
                     }
                     .doc_rtl .invoice_main_info {
-                        float: right; 
+                        float: right;
                     }
                     .doc_rtl .billaddress_wrap {
-                        float: right; 
+                        float: right;
                         padding-left: 0%;
                         padding-right: 4%;
                     }
@@ -647,7 +647,7 @@ class APIFW_Invoice
                                             $html .= "<p style='".$from_address_content_style."'>".$sender_name."</p>";
                                         endif;
                                         $html .= "<div class='from_address_inner'>";
-                                            if( $from_address['visbility']['addr1'] == true ):   
+                                            if( $from_address['visbility']['addr1'] == true ):
                                                 $html .= "<p style='".$from_address_content_style."'>".$sender_addr1."</p>";
                                             endif;
                                             if( $from_address['visbility']['addr2'] == true ):
@@ -833,10 +833,10 @@ class APIFW_Invoice
                                                 foreach( $order_prd_infos as $prd ):
                                                     if( ! empty( $this->invoice_settings['freeLineItems'] ) ){
                                                         $html .= "<tr>";
-                                                            if( $product_table_elements['sku']['status'] == true ): 
+                                                            if( $product_table_elements['sku']['status'] == true ):
                                                                 $html .= "<td style='".$product_table_body_style."' width='11%'>".($prd['sku'] ? $prd['sku']: '--')."</td>";
                                                             endif;
-                                                            if( $product_table_elements['productName']['status'] == true ): 
+                                                            if( $product_table_elements['productName']['status'] == true ):
                                                                 $html .= "<td style='".$product_table_body_style."' width='22%'>";
                                                                     $html .= $prd['name'];
                                                                     if( $prd['meta'] ){
@@ -844,34 +844,34 @@ class APIFW_Invoice
                                                                     }
                                                                 $html .= "</td>";
                                                             endif;
-                                                            if( $product_table_elements['quantity']['status'] == true ): 
+                                                            if( $product_table_elements['quantity']['status'] == true ):
                                                                 $html .= "<td style='".$product_table_body_style."'>".$prd['quantity']."</td>";
                                                             endif;
-                                                            if( $product_table_elements['price']['status'] == true ): 
+                                                            if( $product_table_elements['price']['status'] == true ):
                                                                 $html .= "<td style='".$product_table_body_style."'>".wc_price($prd['price'], array('currency' => $order_data['currency']))."</td>";
                                                             endif;
-                                                            if( $product_table_elements['taxrate']['status'] == true ): 
+                                                            if( $product_table_elements['taxrate']['status'] == true ):
                                                                 $html .= "<td style='".$product_table_body_style."'>".$prd['tax_percent']."%</td>";
                                                             endif;
-                                                            if( $product_table_elements['taxtype']['status'] == true ): 
+                                                            if( $product_table_elements['taxtype']['status'] == true ):
                                                                 $html .= "<td style='".$product_table_body_style."'>".$prd['tax_label']."</td>";
                                                             endif;
-                                                            if( $product_table_elements['taxvalue']['status'] == true ): 
+                                                            if( $product_table_elements['taxvalue']['status'] == true ):
                                                                 $html .= "<td style='".$product_table_body_style."'>".wc_price($prd['subtotal_tax'], array('currency' => $order_data['currency']))."</td>";
                                                             endif;
                                                             $product_total = $prd['subtotal'] + $prd['subtotal_tax'];
                                                             $cart_subtotal = $cart_subtotal + $product_total;
-                                                            if( $product_table_elements['total']['status'] == true ): 
+                                                            if( $product_table_elements['total']['status'] == true ):
                                                                 $html .= "<td style='".$product_table_body_style."'>".wc_price($product_total, array('currency' => $order_data['currency']))."</td>";
                                                             endif;
                                                         $html .= "</tr>";
                                                     } else {
                                                         if( (float) $prd['price'] != 0 ){
                                                             $html .= "<tr>";
-                                                                if( $product_table_elements['sku']['status'] == true ): 
+                                                                if( $product_table_elements['sku']['status'] == true ):
                                                                     $html .= "<td style='".$product_table_body_style."' width='11%'>".($prd['sku'] ? $prd['sku']: '--')."</td>";
                                                                 endif;
-                                                                if( $product_table_elements['productName']['status'] == true ): 
+                                                                if( $product_table_elements['productName']['status'] == true ):
                                                                     $html .= "<td style='".$product_table_body_style."' width='22%'>";
                                                                         $html .= $prd['name'];
                                                                         if( $prd['meta'] ){
@@ -879,24 +879,24 @@ class APIFW_Invoice
                                                                         }
                                                                     $html .= "</td>";
                                                                 endif;
-                                                                if( $product_table_elements['quantity']['status'] == true ): 
+                                                                if( $product_table_elements['quantity']['status'] == true ):
                                                                     $html .= "<td style='".$product_table_body_style."'>".$prd['quantity']."</td>";
                                                                 endif;
-                                                                if( $product_table_elements['price']['status'] == true ): 
+                                                                if( $product_table_elements['price']['status'] == true ):
                                                                     $html .= "<td style='".$product_table_body_style."'>".wc_price($prd['price'], array('currency' => $order_data['currency']))."</td>";
                                                                 endif;
-                                                                if( $product_table_elements['taxrate']['status'] == true ): 
+                                                                if( $product_table_elements['taxrate']['status'] == true ):
                                                                     $html .= "<td style='".$product_table_body_style."'>".$prd['tax_percent']."%</td>";
                                                                 endif;
-                                                                if( $product_table_elements['taxtype']['status'] == true ): 
+                                                                if( $product_table_elements['taxtype']['status'] == true ):
                                                                     $html .= "<td style='".$product_table_body_style."'>".$prd['tax_label']."</td>";
                                                                 endif;
-                                                                if( $product_table_elements['taxvalue']['status'] == true ): 
+                                                                if( $product_table_elements['taxvalue']['status'] == true ):
                                                                     $html .= "<td style='".$product_table_body_style."'>".wc_price($prd['subtotal_tax'], array('currency' => $order_data['currency']))."</td>";
                                                                 endif;
                                                                 $product_total = $prd['subtotal'] + $prd['subtotal_tax'];
                                                                 $cart_subtotal = $cart_subtotal + $product_total;
-                                                                if( $product_table_elements['total']['status'] == true ): 
+                                                                if( $product_table_elements['total']['status'] == true ):
                                                                     $html .= "<td style='".$product_table_body_style."'>".wc_price($product_total, array('currency' => $order_data['currency']))."</td>";
                                                                 endif;
                                                             $html .= "</tr>";
@@ -989,7 +989,7 @@ class APIFW_Invoice
                                         $html .= "<p style='".$from_address_content_style."'>".$sender_name."</p>";
                                     endif;
                                     $html .= "<div class='from_address_inner'>";
-                                        if( $from_address['visbility']['addr1'] == true ):   
+                                        if( $from_address['visbility']['addr1'] == true ):
                                             $html .= "<p style='".$from_address_content_style."'>".$sender_addr1."</p>";
                                         endif;
                                         if( $from_address['visbility']['addr2'] == true ):
@@ -1122,54 +1122,54 @@ class APIFW_Invoice
                                         </thead>
                                         <tbody>";
                                             $html .= "<tr>";
-                                                if( $product_table_elements['sku']['status'] == true ): 
+                                                if( $product_table_elements['sku']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."' width='11%'>S123</td>";
                                                 endif;
-                                                if( $product_table_elements['productName']['status'] == true ): 
+                                                if( $product_table_elements['productName']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."' width='23%'>Flying Ninja</td>";
                                                 endif;
-                                                if( $product_table_elements['quantity']['status'] == true ): 
+                                                if( $product_table_elements['quantity']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>1</td>";
                                                 endif;
-                                                if( $product_table_elements['price']['status'] == true ): 
+                                                if( $product_table_elements['price']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>$100.00</td>";
                                                 endif;
-                                                if( $product_table_elements['taxrate']['status'] == true ): 
+                                                if( $product_table_elements['taxrate']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>15%</td>";
                                                 endif;
-                                                if( $product_table_elements['taxtype']['status'] == true ): 
+                                                if( $product_table_elements['taxtype']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>VAT</td>";
                                                 endif;
-                                                if( $product_table_elements['taxvalue']['status'] == true ): 
+                                                if( $product_table_elements['taxvalue']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>$15.00</td>";
                                                 endif;
-                                                if( $product_table_elements['total']['status'] == true ): 
+                                                if( $product_table_elements['total']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>$115.00</td>";
                                                 endif;
                                             $html .= "</tr>";
                                             $html .= "<tr>";
-                                                if( $product_table_elements['sku']['status'] == true ): 
+                                                if( $product_table_elements['sku']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."' width='11%'>A102</td>";
                                                 endif;
-                                                if( $product_table_elements['productName']['status'] == true ): 
+                                                if( $product_table_elements['productName']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."' width='23%'>T Shirt</td>";
                                                 endif;
-                                                if( $product_table_elements['quantity']['status'] == true ): 
+                                                if( $product_table_elements['quantity']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>2</td>";
                                                 endif;
-                                                if( $product_table_elements['price']['status'] == true ): 
+                                                if( $product_table_elements['price']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>$100.00</td>";
                                                 endif;
-                                                if( $product_table_elements['taxrate']['status'] == true ): 
+                                                if( $product_table_elements['taxrate']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>10%</td>";
                                                 endif;
-                                                if( $product_table_elements['taxtype']['status'] == true ): 
+                                                if( $product_table_elements['taxtype']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>GST</td>";
                                                 endif;
-                                                if( $product_table_elements['taxvalue']['status'] == true ): 
+                                                if( $product_table_elements['taxvalue']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>$20.00</td>";
                                                 endif;
-                                                if( $product_table_elements['total']['status'] == true ): 
+                                                if( $product_table_elements['total']['status'] == true ):
                                                     $html .= "<td style='".$product_table_body_style."'>$220.00</td>";
                                                 endif;
                                             $html .= "</tr>";
@@ -1269,7 +1269,7 @@ class APIFW_Invoice
             //updating next invoice number
             $inv_settings = $this->invoice_settings;
             $new_next_no = $inv_settings['next_no'] + 1;
-            $inv_settings['next_no'] = $new_next_no; 
+            $inv_settings['next_no'] = $new_next_no;
             // $new_inv_settings = serialize( $inv_settings );
             update_option( $this->_token.'_invoice_settings', $inv_settings );
             $this->invoice_settings['next_no'] = $new_next_no;
@@ -1392,7 +1392,7 @@ class APIFW_Invoice
                 }
                 //saving order invoice date meta
                 $order = wc_get_order($order_id);
-                // add_post_meta( $order_id, $this->_token.'_ord_invoice_date', $ivdate, true ); 
+                // add_post_meta( $order_id, $this->_token.'_ord_invoice_date', $ivdate, true );
                 // add_post_meta( $order_id, $this->_token.'_ord_invoice_date_timestamp', $timestamp, true );
                 $order->add_meta_data($this->_token.'_ord_invoice_date', $ivdate, true );
                 $order->add_meta_data($this->_token.'_ord_invoice_date_timestamp', $timestamp, true );
@@ -1511,7 +1511,7 @@ class APIFW_Invoice
 
         $order = wc_get_order( $order_id );
 
-    	// Allow code execution only once 
+    	// Allow code execution only once
     	// if( !get_post_meta( $order_id, $this->_token.'_thankyou_action_done', true ) ) {
             if( $order->get_meta( $this->_token.'_thankyou_action_done', true )){
     		// Get WC_Order status
@@ -1579,6 +1579,6 @@ class APIFW_Invoice
             // invoice number and date generation call
             $this->get_invoice_number( $order_id );
             $this->get_invoice_date( $order_id, 'inv_save' );
-        }    
+        }
     }
 }
