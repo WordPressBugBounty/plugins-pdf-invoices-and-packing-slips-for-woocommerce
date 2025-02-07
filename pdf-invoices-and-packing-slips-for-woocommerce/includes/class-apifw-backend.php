@@ -1008,7 +1008,6 @@ class APIFW_Backend
 		$post_or_order_object;
 		//$order_invoice_no = get_post_meta(get_the_id(), $this->_token.'_ord_invoice_no', true );
 
-
         $orderids_array = array( get_the_id());
         $orderid_enc = (urlencode(json_encode( $orderids_array )) );
 
@@ -1046,24 +1045,23 @@ class APIFW_Backend
         }
     }
 
-    public function newone_orderlist_column_content( $column,$post_or_order_object )
+    public function newone_orderlist_column_content( $column,$order_id)
 	{
 		//global $post;
-		$order = ( $post_or_order_object instanceof WP_post) ? wc_get_order( $post_or_order_object->ID ) : wc_get_order( get_the_id() );
-		$post_or_order_object;
-
-    // $order_invoice_no = $order->get_postmeta($this->_token.'_ord_invoice_no', true );
-    $order_invoice_no = $post_or_order_object->get_meta($this->_token.'_ord_invoice_no', true );
+        $order = wc_get_order($order_id);
+        $orderids_array = array($order->get_id());
+     
+        // $order_invoice_no = $order->get_meta($this->_token.'_ord_invoice_no', true );
 		if ( ! is_object( $order ) || is_numeric( $order ) ) {
 			$orderids_array = array( $post_or_order_object->get_id());
 		}
 
-		$orderids_array = array( $post_or_order_object->get_id());
+		$orderids_array = array($order ->get_id());
 		$orderid_enc = (urlencode(json_encode( $orderids_array )) );
 		if( $column == 'apifw_doc_links' ) {
 			$content = '<div class="apifw_order_col_links">';
 			//invoice link
-			if( $this->invoice_settings['status'] == true && !empty($order_invoice_no)  ):
+			if( $this->invoice_settings['status'] == true && $order->get_meta($this->_token . '_ord_invoice_no', true)  ):
 			$inv_preview_url = admin_url( '?apifw_document=true&order_id='.$orderid_enc.'&type=invoice&action=preview' );
 			$content .= '<a href="'.$inv_preview_url.'" class="apifw_ordtbl_inv_link" target="_blank" title="'.__( 'Invoice', 'pdf-invoices-and-packing-slips-for-woocommerce' ).'">'.__( 'Preview Invoice', 'pdf-invoices-and-packing-slips-for-woocommerce' ).'</a>';
 			endif;
