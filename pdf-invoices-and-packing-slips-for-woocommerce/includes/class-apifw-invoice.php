@@ -141,6 +141,16 @@ class APIFW_Invoice
         return $invoice_name;
     }
 
+    private function find_font_file($font_base, $style_suffix, $available_files) {
+        $target = $font_base . '-' . $style_suffix . '.ttf';
+        foreach ($available_files as $file) {
+            if (strcasecmp($file, $target) === 0) {
+                return $file;
+            }
+        }
+        return false;
+    }
+
     /**
      * Generating pdf file
      * @access  public
@@ -153,21 +163,89 @@ class APIFW_Invoice
             return false;
 
         require_once __DIR__ . '/vendor/autoload.php';
-        $mpdf = new \Mpdf\Mpdf(
-            [
-                'format' => 'A4-P',
-                'debugfonts'=> false,
-                'mode' => 'utf-8',
-                'autoScriptToLang'=>true,
-                'autoLangToFont' => true,
-                'default_font_size' => 14,
-                'default_font' => 'roboto',
-                'margin_left' => 0,
-                'margin_right' => 0,
-                'margin_top' => 10,
-                'margin_bottom' => 10,
-            ]
-        );
+
+        $default_font = 'roboto';
+        $global_fontfamily = isset($this->pdf_template['fontFamily']) ? strtolower(str_replace(' ', '', $this->pdf_template['fontFamily'])) : $default_font;
+
+        $ttfonts_dir = __DIR__ . '/vendor/mpdf/mpdf/ttfonts/';
+        $default_font_path = $ttfonts_dir . $global_fontfamily . '-Regular.ttf';
+        if (!file_exists($default_font_path)) {
+            $global_fontfamily = 'dejavusans';
+        }
+
+        $defaultConfig = (new \Mpdf\Config\ConfigVariables())->getDefaults();
+        $fontDirs = $defaultConfig['fontDir'];
+
+        $defaultFontConfig = (new \Mpdf\Config\FontVariables())->getDefaults();
+        $fontData = $defaultFontConfig['fontdata'];
+
+        $used_fonts = [$global_fontfamily];
+
+        // Detect all used fonts from the template
+        if (!empty($this->pdf_template)) {
+            foreach ($this->pdf_template as $section) {
+                if (is_array($section)) {
+                    foreach ($section as $key => $value) {
+                        if (is_array($value) && isset($value['fontFamily'])) {
+                            $font = strtolower(str_replace(' ', '', $value['fontFamily']));
+                            if (!in_array($font, $used_fonts)) {
+                                $used_fonts[] = $font;
+                            }
+                        } elseif ($key === 'fontFamily' && is_string($value)) {
+                            $font = strtolower(str_replace(' ', '', $value));
+                            if (!in_array($font, $used_fonts)) {
+                                $used_fonts[] = $font;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!in_array('dejavusans', $used_fonts)) {
+            $used_fonts[] = 'dejavusans';
+        }
+
+        // Scan font directory to get available files
+        $available_font_files = scandir($ttfonts_dir);
+
+        // Build fontData dynamically
+        foreach ($used_fonts as $fontfamily) {
+            $font_key = strtolower($fontfamily);
+            $font_styles = ['R' => 'Regular', 'B' => 'Bold', 'I' => 'Italic', 'BI' => 'BoldItalic'];
+            $fontData[$font_key] = [];
+
+            foreach ($font_styles as $style_code => $style_name) {
+                $matched_file = $this->find_font_file($fontfamily, $style_name, $available_font_files);
+                if ($matched_file && file_exists($ttfonts_dir . $matched_file)) {
+                    $fontData[$font_key][$style_code] = $matched_file;
+                }
+            }
+
+            if (empty($fontData[$font_key])) {
+                unset($fontData[$font_key]);
+            }
+        }
+
+        // Set default values for page format and orientation if not set in template
+        $page_format = isset($this->pdf_template['pageFormat']) && !empty($this->pdf_template['pageFormat']) ? $this->pdf_template['pageFormat'] : 'A4';
+        $page_orientation = isset($this->pdf_template['pageOrientation']) && !empty($this->pdf_template['pageOrientation']) ? $this->pdf_template['pageOrientation'] : 'P';
+
+        $mpdf = new \Mpdf\Mpdf([
+            'format' => $page_format,
+            'orientation' => $page_orientation,
+            'mode' => 'utf-8',
+            'default_font_size' => 14,
+            'default_font' => strtolower($global_fontfamily),
+            'margin_left' => 0,
+            'margin_right' => 0,
+            'margin_top' => 10,
+            'margin_bottom' => 10,
+            'fontDir' => array_merge($fontDirs, [$ttfonts_dir]),
+            'fontdata' => $fontData,
+            'autoScriptToLang' => false,
+            'autoLangToFont' => false,
+        ]);
         $html = $this->get_invoice_html_template( $order_ids, $action );
         if( $html ) {
             preg_match('/<div class=\'invoice_footer_wrap\'(.*)?>(.*?)<\/div>/sui', $html, $match);
@@ -523,6 +601,7 @@ class APIFW_Invoice
                         padding: 10px;
                         border-bottom-width: 1px;
                         border-bottom-style: solid;
+                        text-align: left;
                     }
                     .invoice_prdsubtbl_wrap {
                         width: 100%;
