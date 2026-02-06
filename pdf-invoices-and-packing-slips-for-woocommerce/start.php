@@ -1,18 +1,18 @@
 <?php
 /*
  * Plugin Name: PDF Invoices and Packing Slips For WooCommerce
- * Version: 1.4.4
+ * Version: 1.4.5
  * Description: Customize and print invoices and packing slips for WooCommerce orders
  * Author: Acowebs
  * Author URI: http://acowebs.com
  * Requires at least: 4.4.0
- * Tested up to: 6.8
+ * Tested up to: 6.9
  * Text Domain: pdf-invoices-and-packing-slips-for-woocommerce
  * WC requires at least: 3.0.0
- * WC tested up to: 10.1
+ * WC tested up to: 10.3
 */
 define('APIFW_TOKEN', 'apifw');
-define('APIFW_VERSION', '1.4.4');
+define('APIFW_VERSION', '1.4.5');
 define('APIFW_FILE', __FILE__);
 define('APIFW_PLUGIN_NAME', 'PDF Invoice and Packing Slip Labels For WooCommerce');
 define('APIFW_STORE_URL', 'https://api.acowebs.com');
