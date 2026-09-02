@@ -5,9 +5,9 @@ Contributors: acowebs
 Donate link:
 Tags: PDF Invoices, Invoices, Packing Slips, Shipping Labels, Delivery Notes, Dispatch Labels, Print Invoices
 Requires at least: 4.4.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.9
+Stable tag: 1.4.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -116,6 +116,8 @@ It will be auto incremented according to new order. There are reset option also 
 
 == Changelog ==
 
+= 1.4.10 =
+* WordPress 7.1.x Support
 = 1.4.9 =
 * WooCommerce 11.0.x Support
 = 1.4.8 =

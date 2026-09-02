@@ -154,6 +154,10 @@ class APIFW_Backend
         // adding bulk actions to order table
         add_filter( 'bulk_actions-edit-shop_order', array( $this, 'custom_bulk_actions_ordertable' ), 20, 1 );
 		add_filter( 'bulk_actions-woocommerce_page_wc-orders', array( $this, 'custom_bulk_actions_ordertable' ), 20, 1 );
+        // PHP fallback for handling bulk actions
+        add_filter( 'handle_bulk_actions-edit-shop_order', array( $this, 'handle_bulk_actions_native' ), 10, 3 );
+        add_filter( 'handle_bulk_actions-woocommerce_page_wc-orders', array( $this, 'handle_bulk_actions_native' ), 10, 3 );
+        add_filter( 'handle_bulk_actions-edit-awcdp_payment', array( $this, 'handle_bulk_actions_native' ), 10, 3 );
         // ajax function for bulk action
         add_action( 'wp_ajax_apifw_handle_bulk_action_urls', array( $this, 'handle_bulk_actions_ordertable' ) );
 		//add_action( 'wp_ajax_wc_ajax_apifw_handle_bulk_action_urls', array( $this, 'handle_bulk_actions_ordertable' ) );
@@ -1053,7 +1057,7 @@ class APIFW_Backend
      
         // $order_invoice_no = $order->get_meta($this->_token.'_ord_invoice_no', true );
 		if ( ! is_object( $order ) || is_numeric( $order ) ) {
-			$orderids_array = array( $post_or_order_object->get_id());
+			$orderids_array = array( $order->get_id());
 		}
 
 		$orderids_array = array($order ->get_id());
@@ -1167,6 +1171,29 @@ class APIFW_Backend
     }
 
     /**
+     * Native WordPress / WooCommerce bulk actions handler
+    */
+    public function handle_bulk_actions_native( $redirect_to, $action, $order_ids )
+    {
+        $actions_map = array(
+            'apifw_invoice_preview'  => array( 'type' => 'invoice', 'action' => 'preview' ),
+            'apifw_invoice_download' => array( 'type' => 'invoice', 'action' => 'download' ),
+            'apifw_packing_slip'     => array( 'type' => 'packing_slip', 'action' => 'preview' ),
+            'apifw_delivery_note'    => array( 'type' => 'delivery_note', 'action' => 'preview' ),
+            'apifw_shipping_label'   => array( 'type' => 'shipping_label', 'action' => 'preview' ),
+            'apifw_dispatch_label'   => array( 'type' => 'dispatch_label', 'action' => 'preview' ),
+        );
+
+        if ( isset( $actions_map[ $action ] ) && ! empty( $order_ids ) ) {
+            $order_ids_array = array_values( array_map( 'intval', (array) $order_ids ) );
+            $orderid_enc = urlencode( json_encode( $order_ids_array ) );
+            return admin_url( '?apifw_document=true&order_id=' . $orderid_enc . '&type=' . $actions_map[ $action ]['type'] . '&action=' . $actions_map[ $action ]['action'] );
+        }
+
+        return $redirect_to;
+    }
+
+    /**
      * Creating deposit payments page metabox for documents
     */
     public function add_deposit_page_meta_box()
@@ -1277,41 +1304,52 @@ class APIFW_Backend
     public function admin_footer_scripts()
     {
         $currentScreen = get_current_screen();
-        if( $currentScreen->id == 'edit-shop_order' || $currentScreen->id == 'edit-awcdp_payment' ||$currentScreen->id == 'woocommerce_page_wc-orders') { ?>
+        if ( $currentScreen && in_array( $currentScreen->id, array( 'edit-shop_order', 'edit-awcdp_payment', 'woocommerce_page_wc-orders' ), true ) ) { ?>
             <script>
                 jQuery(document).ready(function($) {
                     // bulk action handle
                     $('#doaction, #doaction2').on('click', function(e) {
-                        let action_select_name = $(this).attr("id").substr(2);
+                        let action_select_name = $(this).attr("id") === 'doaction2' ? 'action2' : 'action';
 		                let action = $('select[name="' + action_select_name + '"]').val();
                         var actions_list = ['apifw_invoice_preview', 'apifw_invoice_download', 'apifw_packing_slip', 'apifw_delivery_note', 'apifw_shipping_label', 'apifw_dispatch_label'];
                         if ( actions_list.includes(action) ) {
-                            if( action != 'apifw_invoice_preview' && action != 'apifw_invoice_download' ){
-                                e.preventDefault();
-                            }
+                            e.preventDefault();
 
                             let order_ids = [];
-                            $('tbody th.check-column input[type="checkbox"]:checked').each( function() {
-                                order_ids.push($(this).val());
+                            $('tbody .check-column input[type="checkbox"]:checked, tbody input[name="id[]"]:checked, tbody input[name="post[]"]:checked').each( function() {
+                                let val = $(this).val();
+                                if ( val && !order_ids.includes(val) ) {
+                                    order_ids.push(val);
+                                }
                             });
 
-                            if( order_ids.length > 0 ){
-                                var data = {
-                                    'action': 'apifw_handle_bulk_action_urls',
-                                    'order_id': order_ids.join(),
-                                    'type': action
-                                };
+                            if ( order_ids.length > 0 ) {
+                                var doc_type = 'invoice';
+                                var doc_action = 'preview';
 
-                                jQuery.post(ajaxurl, data, function(response) {
-                                    if( response != ''){
-                                        window.open(response, '_blank');
-                                        return;
-                                    }
-                                });
-                            } else {
-                                return;
+                                if ( action === 'apifw_invoice_download' ) {
+                                    doc_type = 'invoice';
+                                    doc_action = 'download';
+                                } else if ( action === 'apifw_packing_slip' ) {
+                                    doc_type = 'packing_slip';
+                                    doc_action = 'preview';
+                                } else if ( action === 'apifw_delivery_note' ) {
+                                    doc_type = 'delivery_note';
+                                    doc_action = 'preview';
+                                } else if ( action === 'apifw_shipping_label' ) {
+                                    doc_type = 'shipping_label';
+                                    doc_action = 'preview';
+                                } else if ( action === 'apifw_dispatch_label' ) {
+                                    doc_type = 'dispatch_label';
+                                    doc_action = 'preview';
+                                }
+
+                                var orderid_enc = encodeURIComponent(JSON.stringify(order_ids));
+                                var baseUrl = <?php echo json_encode( admin_url( '?apifw_document=true' ) ); ?>;
+                                var finalUrl = baseUrl + '&order_id=' + orderid_enc + '&type=' + doc_type + '&action=' + doc_action;
+
+                                window.open(finalUrl, '_blank');
                             }
-                            exit();
                         }
                     });
                 });
