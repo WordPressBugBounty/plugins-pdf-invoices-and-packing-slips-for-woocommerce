@@ -139,6 +139,13 @@ class APIFW_Api
                 }
 				break;
             case 'documents':
+                $document_keys = array( 'invoice', 'packing_slip', 'shipping_label', 'delivery_note', 'dispatch_label' );
+                foreach ( $document_keys as $document_key ) {
+                    if ( ! isset( $settings[ $document_key ] ) || ! is_array( $settings[ $document_key ] ) ) {
+                        return new WP_REST_Response( 0, 400 );
+                    }
+                }
+
                 // invoice settings
 				$new_invoice_settings = $settings['invoice'];
                 $current_invoice_settings = get_option(APIFW_TOKEN.'_invoice_settings');
@@ -191,7 +198,10 @@ class APIFW_Api
                 break;
             case 'invoice_template':
                 $template_pid = $settings['template_id'];
-                $templateSettings = $settings['settings'];
+                $templateSettings = isset( $settings['settings'] ) ? $settings['settings'] : null;
+                if ( ! is_array( $templateSettings ) ) {
+                    return new WP_REST_Response( 0, 400 );
+                }
                 if( $template_pid && $templateSettings ){
                     $inv_templt_post = array(
                         'ID' => $template_pid,

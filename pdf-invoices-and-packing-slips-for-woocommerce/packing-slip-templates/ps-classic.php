@@ -345,7 +345,7 @@ $html = "<!DOCTYPE html>
                                                 } else {
                                                     $prd_img = plugin_dir_url( plugin_dir_path( __FILE__ ) ).'assets/images/woocommerce-placeholder.png';
                                                 }
-                                                $html .= "<img src='". $prd_img."' alt='".$prd['name']."' width='50px' />";
+                                                $html .= "<img src='". apifw_get_image_path( $prd_img )."' alt='".$prd['name']."' width='50px' />";
                                             $html .="</td>";
                                         endif;
                                         $html .= "<td style='".$tbl_body_styles."'>".($prd['sku'] ? $prd['sku']: '--')."</td>";
@@ -529,7 +529,7 @@ $html = "<!DOCTYPE html>
                                                 } else {
                                                     $prd_img = plugin_dir_url( plugin_dir_path( __FILE__ ) ).'assets/images/woocommerce-placeholder.png';
                                                 }
-                                                $html .= "<img src='". $prd_img."' alt='".$prd['name']."' width='50px' />";
+                                                $html .= "<img src='". apifw_get_image_path( $prd_img )."' alt='".$prd['name']."' width='50px' />";
                                             $html .="</td>";
                                         endif;
                                         $html .= "<td style='".$tbl_body_styles."'>".($prd['sku'] ? $prd['sku']: '--')."</td>";

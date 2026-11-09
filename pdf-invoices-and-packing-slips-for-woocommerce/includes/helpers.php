@@ -1,5 +1,41 @@
 <?php
 /**
+ * Converting a local image url to its file path for mpdf
+ * mpdf fetches urls over http, which fails when the server blocks it (hotlink protection, firewall, ssl, loopback)
+ * @access  public
+ * @param url
+*/
+if (!function_exists('apifw_get_image_path')) {
+    function apifw_get_image_path( $url ){
+        if ( !$url || !is_string( $url ) )
+            return $url;
+
+        $upload = wp_upload_dir();
+        $maps = array(
+            $upload['baseurl'] => $upload['basedir'],
+            content_url() => WP_CONTENT_DIR,
+        );
+
+        // ignoring protocol and query string while matching
+        $clean_url = preg_replace( '/^https?:/i', '', strtok( $url, '?#' ) );
+        foreach ( $maps as $base_url => $base_dir ) {
+            $base_url = preg_replace( '/^https?:/i', '', untrailingslashit( $base_url ) );
+            if ( $base_url && stripos( $clean_url, $base_url . '/' ) === 0 ) {
+                $path = untrailingslashit( $base_dir ) . rawurldecode( substr( $clean_url, strlen( $base_url ) ) );
+                $real_path = realpath( $path );
+                $real_dir = realpath( $base_dir );
+                // making sure the file exists and stays inside the base directory
+                if ( $real_path && $real_dir && strpos( $real_path, $real_dir ) === 0 && is_readable( $real_path ) ) {
+                    return $real_path;
+                }
+            }
+        }
+
+        return $url;
+    }
+}
+
+/**
  * Getting order details from order id
  * @access  public
  * @param order

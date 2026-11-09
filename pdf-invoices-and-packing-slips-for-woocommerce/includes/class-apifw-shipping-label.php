@@ -100,7 +100,7 @@ class APIFW_Shipping_Label
         $order_ids = $this->order_ids;
         //general datas
         $company_name = $this->general_settings['company_name'];
-        $company_logo = $this->general_settings['company_logo'];
+        $company_logo = apifw_get_image_path( $this->general_settings['company_logo'] );
         $sender_name = $this->general_settings['sender_name'];
         $sender_addr1 = $this->general_settings['sender_addr1'];
         $sender_addr2 = $this->general_settings['sender_addr2'];

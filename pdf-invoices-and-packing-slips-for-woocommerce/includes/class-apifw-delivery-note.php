@@ -100,7 +100,7 @@ class APIFW_Delivery_Note
         $order_ids = $this->order_ids;
         //general datas
         $company_name = $this->general_settings['company_name'];
-        $company_logo = $this->general_settings['company_logo'];
+        $company_logo = apifw_get_image_path( $this->general_settings['company_logo'] );
         $sender_name = $this->general_settings['sender_name'];
         $sender_addr1 = $this->general_settings['sender_addr1'];
         $sender_addr2 = $this->general_settings['sender_addr2'];
@@ -448,7 +448,7 @@ class APIFW_Delivery_Note
                                                     } else {
                                                         $prd_img = plugin_dir_url( plugin_dir_path( __FILE__ ) ).'assets/images/woocommerce-placeholder.png';
                                                     }
-                                                    $html .= "<img src='". $prd_img."' alt='".$prd['name']."' width='50px' />";
+                                                    $html .= "<img src='". apifw_get_image_path( $prd_img )."' alt='".$prd['name']."' width='50px' />";
                                                 $html .="</td>";
                                             endif;
                                             $html .= "<td width='11%'>".($prd['sku'] ? $prd['sku']: '--')."</td>";

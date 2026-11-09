@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: PDF Invoices and Packing Slips For WooCommerce
- * Version: 1.4.10
+ * Version: 1.4.11
  * Description: Customize and print invoices and packing slips for WooCommerce orders
  * Author: Acowebs
  * Author URI: http://acowebs.com
@@ -9,15 +9,50 @@
  * Tested up to: 7.1
  * Text Domain: pdf-invoices-and-packing-slips-for-woocommerce
  * WC requires at least: 3.0.0
- * WC tested up to: 11.0
+ * WC tested up to: 11.2
  * Requires PHP: 7.4
 */
 define('APIFW_TOKEN', 'apifw');
-define('APIFW_VERSION', '1.4.10');
+define('APIFW_VERSION', '1.4.11');
 define('APIFW_FILE', __FILE__);
 define('APIFW_PLUGIN_NAME', 'PDF Invoice and Packing Slip Labels For WooCommerce');
 define('APIFW_STORE_URL', 'https://api.acowebs.com');
 define('APIFW_WP_VERSION', get_bloginfo('version'));
+
+// Acowebs Feedback API (deactivation feedback + newsletter opt-in).
+define('APIFW_FEEDBACK_PLUGIN', 'PDF Invoices and Packing Slips'); // Canonical name, same in Free and PRO.
+define('APIFW_EDITION', 'free');
+define('APIFW_SLUG', 'pdf-invoices-and-packing-slips-for-woocommerce');
+
+// The shared Acowebs classes need PHP 7.1+; on older PHP nothing is sent or shown.
+if (version_compare(PHP_VERSION, '7.1', '>=')) {
+    require_once plugin_dir_path(__FILE__) . 'includes/class-acowebs-feedback-client.php';
+    require_once plugin_dir_path(__FILE__) . 'includes/class-acowebs-feedback-optin.php';
+
+    // Newsletter notice: WP Dashboard only (no plugin pages listed).
+    Acowebs_Feedback_Optin::register(array(
+        'plugin'     => APIFW_FEEDBACK_PLUGIN,
+        'edition'    => APIFW_EDITION,
+        'list'       => 'pdf invoices and packing slips for woocommerce', // Acowebs panel list for this plugin's subscribers.
+        'slug'       => APIFW_SLUG,
+        'page_slugs' => array(),
+        'prefix'     => 'apifw',
+        'kit_dir'    => plugin_dir_path(__FILE__) . 'assets/acowebs-ui-kit/',
+        'kit_url'    => plugin_dir_url(__FILE__) . 'assets/acowebs-ui-kit/',
+    ));
+
+    // Align the newsletter card with the other admin notices (same width and spacing). Outer box only:
+    // the wrapper and the kit card each add a 20px right margin, so the card ended short of the others.
+    add_action('admin_enqueue_scripts', function () {
+        if (wp_style_is('acowebs-feedback-ui', 'enqueued')) {
+            wp_add_inline_style(
+                'acowebs-feedback-ui',
+                '.notice.acowebs-optin-notice{margin:5px 0 15px !important}' .
+                '.acowebs-optin-notice > .acofb.acofb-notice{margin:0}'
+            );
+        }
+    }, 20);
+}
 
 // /defining template saving directory name
 if ( !defined('APIFW_TEMPLATE_DIR_NAME') ){

@@ -306,6 +306,7 @@ class APIFW_Invoice
         if( $this->invoice_settings['invoice_logo'] && $this->invoice_settings['invoice_logo'] != '' ) {
             $company_logo = $this->invoice_settings['invoice_logo'];
         }
+        $company_logo = apifw_get_image_path( $company_logo );
 
         //getting choosen template
         $invoice_template = $this->pdf_template;
